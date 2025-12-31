@@ -1,0 +1,105 @@
+[
+  {
+    "projectName": "Paw Protector",
+    "description": "A comprehensive <strong>animal welfare platform</strong> designed to bridge the gap between pet adoption and community care. The system allows users to report stray animals, browse adoption listings, and manage veterinary records through a secure interface. I focused heavily on the <span className=\"text-cyan-400\">UX/UI design</span> to ensure accessibility for non-technical users while maintaining a robust backend for data integrity. It solves the problem of fragmented pet care information by centralizing it into one responsive application. Built with <strong>Khandoker Md Tanjinul Islam</strong>, <strong>Epshita Jahan</strong>, and <strong>Rubaiyat Zaman Raisa</strong>.",
+    "tags": ["React", "Node.js", "PostGreSQL", "Vector Database", "AI-RAG", "Tailwind CSS"],
+    "categories": ["Development", "AI", "ML"],
+    "image": "/images/projects/paw-protector.png",
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/Pritom2357/Paw-Protector" }
+    ]
+  },
+  {
+    "projectName": "Auto Drive Downloader",
+    "description": "A browser extension designed to <strong>automate the workflow</strong> of downloading files and staying updated with continuous drive files upload from Google Drive. It detects Drive URLs and downloads the new files in the drive which are not in the local machine, streamlining the experience for power users. I utilized <span className=\"text-yellow-400\">JavaScript DOM manipulation</span> to interact with page elements dynamically. This project highlights my ability to build utility tools that solve specific, repetitive user frustrations.",
+    "tags": ["JavaScript", "Chrome Extension API", "DOM Manipulation", "HTML/CSS"],
+    "categories": ["Development"],
+    "image": "/images/projects/drive-downloader.png",
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/Pritom2357/Automatic-Google-Drive-Downloader-Extension" }
+    ]
+  },
+  {
+    "projectName": "Resource Base (Full Stack)",
+    "description": "A centralized <strong>academic repository</strong> built to help students share and access study materials efficiently. This project tackles the issue of scattered educational resources by providing a structured platform with <span className=\"text-purple-400\">role-based authentication</span> for admins and students. I architected the application as a decoupled Monorepo, separating the <strong>Frontend</strong> and <strong>Backend</strong> to ensure independent scalability and cleaner code maintenance. The system supports file uploads, category filtering, and real-time updates.",
+    "tags": ["MERN Stack", "JWT Auth", "Multer", "React Router", "REST API", "PostGreSQL"],
+    "categories": ["Development"],
+    "image": "/images/projects/resource-base.png",
+    "repoLinks": [
+      { "label": "Frontend", "url": "https://github.com/Pritom2357/Resource-Base-Frontend" },
+      { "label": "Backend", "url": "https://github.com/Pritom2357/Resource-Base-Backend" }
+    ]
+  },
+  {
+    "projectName": "SQL Data Warehouse",
+    "description": "A deep dive into <strong>Data Engineering</strong> concepts, focusing on constructing a Medallion-schema data warehouse. This project involves complex <span className=\"text-blue-400\">ETL processes</span> to transform raw transactional data into analytical formats suitable for business intelligence. I implemented stored procedures and triggers to automate data integrity checks. It demonstrates my proficiency in handling large datasets and optimizing database architecture for read-heavy operations.",
+    "tags": ["SQL Server", "ETL", "Data Warehousing", "Stored Procedures", "Database Design"],
+    "categories": ["Development"],
+    "image": "/images/projects/sql-warehouse.png",
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/Pritom2357/SQL-DataWarehouse-and-More" }
+    ]
+  },
+  {
+    "projectName": "Visiting SQL",
+    "description": "A robust <strong>database management practice</strong> designed to handle visitor logs and entry tracking for organizations. The project utilizes advanced SQL queries to generate reports on visitor traffic, peak hours, and security alerts. I focused on normalizing the database to <span className=\"text-green-400\">3NF</span> to reduce redundancy and improve query performance. It serves as a practical implementation of relational database theory in a real-world scenario.",
+    "tags": ["SQL", "Database Normalization", "Relational Algebra", "Backend Logic"],
+    "categories": ["Development"],
+    "image": "/images/projects/visiting-sql.png",
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/Pritom2357/Visiting-SQL" }
+    ]
+  },
+  {
+    "projectName": "Post and Graph Generator",
+    "description": "An interactive frontend application that leverages <strong>AI concepts</strong> to help users generate social media content instantly. Also, generates graphs from any written content using mermaid graph format. The interface is built to be minimal yet powerful, allowing users to input prompts and receive formatted posts in real-time. I focused on state management to handle API states (loading, success, error) gracefully, ensuring a <span className=\"text-pink-400\">smooth user experience</span>. This project represents my step into integrating AI services into modern web UIs.",
+    "tags": ["React", "API Integration", "CSS3", "State Management", "AI Integration"],
+    "categories": ["Development", "AI"],
+    "image": "/images/projects/post-generator.png",
+    "repoLinks": [
+      { "label": "Frontend", "url": "https://github.com/Pritom2357/Post-Generator-Frontend" },
+      { "label": "Backend", "url": "https://github.com/Pritom2357/PG-Backend" }
+    ]
+  },
+  {
+    "projectName": "iGraphics Simulation",
+    "description": "A classic <strong>2D graphical project</strong> built using C++ and the iGraphics library, demonstrating core computer graphics principles in level 1 term 2. I along with my teammate Khandoker Md Tanjinul Islam, developed a online store to see how things actually work for the online super shops. There we faced race conditions, deadlock and stuffs and gracefully handled each problem with networking",
+    "tags": ["C++", "iGraphics", "JAVAFX", "CSS", "Socket"],
+    "categories": ["Development"],
+    "image": "/images/projects/igraphics.png",
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/Pritom2357/iGraphics-Project" }
+    ]
+  },
+  {
+    "projectName": "Unity Game Dev",
+    "description": "An immersive game development project utilizing the <strong>Unity Engine</strong> and C# scripting. We designed the gameplay mechanics, including player movement, enemy AI behavior, and level progression systems. The project explores the complexity of <span className=\"text-indigo-400\">Object-Oriented Programming</span> applied to real-time rendering and state management. It showcases my ability to merge creativity with complex logic to build interactive software. Built for the game <strong>Soul</strong> alongside <strong>Ragib Shahrier Bin Kabir</strong> and <strong>Mohammad Ashfaqul Hasan</strong>.",
+    "tags": ["Unity", "C#", "Game Physics", "OOP", "Level Design"],
+    "categories": ["Development"],
+    "image": "/images/projects/unity-game.png",
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/Pritom2357/unity-game" },
+      { "label": "Itch.io", "url": "https://ragibshahrier.itch.io/soul" }
+    ]
+  },
+  {
+    "projectName": "Docker Init",
+    "description": "A DevOps utility focused on <strong>automating containerization</strong> setups for development environments. This repository contains scripts and configurations to instantly spin up Docker containers for various tech stacks, reducing environment inconsistencies. I implemented <span className=\"text-blue-500\">Docker Compose</span> orchestrations to handle multi-container applications seamlessly. It reflects my focus on developer productivity and infrastructure as code.",
+    "tags": ["Docker", "Bash Scripting", "DevOps", "CI/CD", "Containerization"],
+    "categories": ["Development"],
+    "image": "../assets/docker-init.png",
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/Pritom2357/Initialize-Docker" }
+    ]
+  },
+  {
+    "projectName": "Node.js Template",
+    "description": "A highly reusable <strong>starter boilerplate</strong> for building scalable backend systems with Node.js. It comes pre-configured with essential security middleware, error handling structures, and API routing best practices. I created this to <span className=\"text-emerald-400\">speed up development</span> cycles for future projects, ensuring a consistent and clean architecture from day one. It demonstrates my proactive approach to software design patterns.",
+    "tags": ["Node.js", "Express", "Software Architecture", "Boilerplate", "API Design"],
+    "categories": ["Development"],
+    "image": "/images/projects/node-template.png",
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/Pritom2357/Basic-NodeJS-Template" }
+    ]
+  }
+]
