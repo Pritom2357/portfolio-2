@@ -62,8 +62,8 @@
     ]
   },
   {
-    "projectName": "iGraphics Simulation",
-    "description": "A classic <strong>2D graphical project</strong> built using C++ and the iGraphics library, demonstrating core computer graphics principles in level 1 term 2. I along with my teammate Khandoker Md Tanjinul Islam, developed a online store to see how things actually work for the online super shops. There we faced race conditions, deadlock and stuffs and gracefully handled each problem with networking",
+    "projectName": "Java Project",
+    "description": "A classic <strong>Online shop</strong> built using Java and the JavaFX library, demonstrating core computer networking principles in level 1 term 2. I along with my teammate Khandoker Md Tanjinul Islam, developed a online store to see how things actually work for the online super shops. There we faced race conditions, deadlock and stuffs and gracefully handled each problem with networking",
     "tags": ["C++", "iGraphics", "JAVAFX", "CSS", "Socket"],
     "categories": ["Development"],
     "image": "/images/projects/igraphics.png",
