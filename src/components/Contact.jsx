@@ -169,7 +169,7 @@ const Contact = () => {
           <BentoCard delay={400}>
             <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
               <BriefcaseIcon className="w-5 h-5 text-purple-400" />
-              What did I do previously?
+              What I did previously
             </h2>
             <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
               <p>
