@@ -1,7 +1,7 @@
 [
   {
     "projectName": "Paw Protector",
-    "description": "A comprehensive <strong>animal welfare platform</strong> designed to bridge the gap between pet adoption and community care. The system allows users to report stray animals, browse adoption listings, and manage veterinary records through a secure interface. I focused heavily on the <span className=\"text-cyan-400\">UX/UI design</span> to ensure accessibility for non-technical users while maintaining a robust backend for data integrity. It solves the problem of fragmented pet care information by centralizing it into one responsive application. Built with <strong>Khandoker Md Tanjinul Islam</strong>, <strong>Epshita Jahan</strong>, and <strong>Rubaiyat Zaman Raisa</strong>.",
+    "description": "A comprehensive <strong>animal welfare platform</strong> designed to bridge the gap between pet adoption and community care. The system allows users to report stray animals, browse adoption listings, and manage veterinary records through a secure interface. I focused heavily on the <span className=\"text-cyan-400\">System design and AI orchestration</span> to ensure accessibility for non-technical users while maintaining a robust backend for data integrity. It solves the problem of fragmented pet care information by centralizing it into one responsive application. Built with <strong>Khandoker Md Tanjinul Islam</strong>, <strong>Epshita Jahan</strong>, and <strong>Rubaiyat Zaman Raisa</strong>.",
     "tags": ["React", "Node.js", "PostGreSQL", "Vector Database", "AI-RAG", "Tailwind CSS"],
     "categories": ["Development", "AI", "ML"],
     "image": "/images/projects/paw-protector.png",
