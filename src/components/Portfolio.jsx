@@ -250,11 +250,9 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className="min-h-screen md:h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-4 pb-4 pt-20 md:p-6 lg:p-8 overflow-y-auto md:overflow-hidden flex items-start md:items-center justify-center">
+      <div className="min-h-screen md:h-screen bg-slate-950 px-4 pb-4 pt-20 md:p-6 lg:p-8 overflow-y-auto md:overflow-hidden flex items-start md:items-center justify-center">
         {/* Animated background elements */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[100px] animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
           
           {/* Grid pattern overlay */}
@@ -294,7 +292,7 @@ const Portfolio = () => {
           </BentoCard>
 
           {/* CURRENTLY LEARNING */}
-          <BentoCard index={6} className="currently-learning group bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border-emerald-500/20">
+          <BentoCard index={6} className="currently-learning group bg-slate-900/50 border-emerald-500/20">
             <div className="h-full flex flex-col">
               <h3 className="text-[clamp(0.875rem,2vw,1.125rem)] font-semibold text-white mb-2 flex items-center gap-2">
                 <img
@@ -324,7 +322,7 @@ const Portfolio = () => {
           </BentoCard>
 
           {/* WHAT DO I DO */}
-          <BentoCard index={2} className="what-i-do group bg-gradient-to-br from-cyan-500/15 to-blue-600/15 border-cyan-500/30" onHoverChange={setWhatHovered}>
+          <BentoCard index={2} className="what-i-do group bg-slate-900/50 border-cyan-500/30" onHoverChange={setWhatHovered}>
             <div className="flex flex-col items-center justify-center h-full text-center">
               <div className="relative mb-3">
                 <BriefcaseIcon className="w-[clamp(2rem,8vw,3rem)] h-[clamp(2rem,8vw,3rem)] text-cyan-400 group-hover:scale-110 transition-transform" />

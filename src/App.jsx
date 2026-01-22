@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, useCallback } from 'react'
 import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom'
 import Portfolio from './components/Portfolio'
 import Projects from './components/Projects'
@@ -64,14 +64,42 @@ const Navigation = () => {
 }
 
 function App() {
+  const [mouse, setMouse] = useState({ x: 0, y: 0 })
+
+  const handleMouseMove = useCallback((e) => {
+    setMouse({ x: e.clientX, y: e.clientY })
+  }, [])
+
   return (
     <BrowserRouter>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Portfolio />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div onMouseMove={handleMouseMove} className="relative min-h-screen">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Portfolio />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        
+        {/* Torchlight effect */}
+        <div
+          style={{
+            position: 'fixed',
+            top: mouse.y,
+            left: mouse.x,
+            width: '700px',
+            height: '700px',
+            transform: 'translate(-50%, -50%)',
+            pointerEvents: 'none',
+            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%)',
+            mixBlendMode: 'overlay',
+            borderRadius: '50%',
+            boxShadow: '0 0 30px rgba(255, 255, 255, 0.05)',
+            filter: 'blur(20px)',
+            transition: 'background 0.3s, box-shadow 0.3s, filter 0.3s',
+            zIndex: 9999,
+          }}
+        />
+      </div>
     </BrowserRouter>
   )
 }
