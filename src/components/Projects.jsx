@@ -12,12 +12,12 @@ import dockerInitImg from '../assets/docker-init.png'
 
 // Map project names to uploaded asset images
 const imageMap = {
-  'Paw Protector': pawProtectorImg,
+  'PawPal': pawProtectorImg,
   'Resource Base (Full Stack)': resourceBaseImg,
   'Auto Drive Downloader': autoDriveImg,
   'SQL Data Warehouse': sqlWarehouseImg,
   'Post and Graph Generator': graphGeneratorImg,
-  'iGraphics Simulation': igraphicsImg,
+  'Java Project': igraphicsImg,
   'Unity Game Dev': unityGameImg,
   'Docker Init': dockerInitImg,
   'Node.js Template': graphGeneratorImg,
@@ -54,15 +54,14 @@ const ProjectRow = ({ project, rowIndex }) => {
 
   const imageSrc = imageMap[project.projectName] || project.image;
 
+  // Flat palette from the landing illustration; border is black via CSS
   const tagThemes = useMemo(
     () => [
-      { bg: 'rgba(103, 232, 249, 0.12)', border: 'rgba(103, 232, 249, 0.35)', color: '#a5f3fc' },
-      { bg: 'rgba(167, 139, 250, 0.12)', border: 'rgba(167, 139, 250, 0.35)', color: '#c4b5fd' },
-      { bg: 'rgba(244, 114, 182, 0.12)', border: 'rgba(244, 114, 182, 0.35)', color: '#f9a8d4' },
-      { bg: 'rgba(245, 158, 11, 0.12)', border: 'rgba(245, 158, 11, 0.35)', color: '#fcd34d' },
-      { bg: 'rgba(52, 211, 153, 0.12)', border: 'rgba(52, 211, 153, 0.35)', color: '#6ee7b7' },
-      { bg: 'rgba(56, 189, 248, 0.12)', border: 'rgba(56, 189, 248, 0.35)', color: '#7dd3fc' },
-      { bg: 'rgba(251, 113, 133, 0.12)', border: 'rgba(251, 113, 133, 0.35)', color: '#fecdd3' },
+      { bg: 'var(--color-mustard)', color: 'var(--color-ink)' },
+      { bg: 'var(--color-lavender)', color: 'var(--color-ink)' },
+      { bg: 'var(--color-orange)', color: 'var(--color-paper)' },
+      { bg: 'var(--color-navy)', color: 'var(--color-paper)' },
+      { bg: 'var(--color-paper)', color: 'var(--color-ink)' },
     ],
     []
   );
@@ -143,7 +142,7 @@ const ProjectRow = ({ project, rowIndex }) => {
                 <span
                   key={i}
                   className="project-box__tag"
-                  style={{ background: theme.bg, borderColor: theme.border, color: theme.color }}
+                  style={{ background: theme.bg, color: theme.color }}
                 >
                   {tag}
                 </span>
@@ -216,13 +215,7 @@ const Projects = () => {
 
   return (
     <div className="projects-page">
-      {/* Background effects */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] animate-pulse"
-          style={{ animationDelay: '2s' }}
-        ></div>
-      </div>
+      <div className="nb-dots" aria-hidden="true"></div>
 
       {/* Content */}
       <div className="projects-container">

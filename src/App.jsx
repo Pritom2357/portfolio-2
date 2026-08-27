@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, useCallback } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom'
 import Portfolio from './components/Portfolio'
 import Projects from './components/Projects'
@@ -35,24 +35,22 @@ const Navigation = () => {
     <div
       className={
         'fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ' +
-        (isNavVisible
-          ? 'opacity-70 hover:opacity-100 focus-within:opacity-100 translate-y-0'
-          : 'opacity-0 -translate-y-2 pointer-events-none')
+        (isNavVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none')
       }
     >
       <nav
         aria-label="Primary"
-        className="inline-flex items-center gap-1 rounded-full border border-slate-700/50 bg-slate-900/45 backdrop-blur-md px-1.5 py-1 shadow-lg shadow-black/20"
+        className="inline-flex items-center gap-1 rounded-lg border-[3px] border-ink bg-paper px-1.5 py-1 shadow-nb"
       >
         {pages.map((p) => (
           <NavLink
             key={p.path}
             to={p.path}
             className={({ isActive }) =>
-              "px-4 py-1.5 text-sm font-medium rounded-full transition-colors " +
+              'px-4 py-1.5 text-sm font-bold rounded-md border-2 transition-colors ' +
               (isActive
-                ? 'bg-slate-700/60 text-white'
-                : 'text-slate-300 hover:text-white hover:bg-slate-800/50')
+                ? 'bg-mustard border-ink text-ink'
+                : 'border-transparent text-ink hover:bg-lavender hover:border-ink')
             }
           >
             {p.label}
@@ -64,41 +62,15 @@ const Navigation = () => {
 }
 
 function App() {
-  const [mouse, setMouse] = useState({ x: 0, y: 0 })
-
-  const handleMouseMove = useCallback((e) => {
-    setMouse({ x: e.clientX, y: e.clientY })
-  }, [])
-
   return (
     <BrowserRouter>
-      <div onMouseMove={handleMouseMove} className="relative min-h-screen">
+      <div className="relative min-h-screen bg-cream text-ink">
         <Navigation />
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        
-        {/* Torchlight effect */}
-        <div
-          style={{
-            position: 'fixed',
-            top: mouse.y,
-            left: mouse.x,
-            width: '700px',
-            height: '700px',
-            transform: 'translate(-50%, -50%)',
-            pointerEvents: 'none',
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%)',
-            mixBlendMode: 'overlay',
-            borderRadius: '50%',
-            boxShadow: '0 0 30px rgba(255, 255, 255, 0.05)',
-            filter: 'blur(20px)',
-            transition: 'background 0.3s, box-shadow 0.3s, filter 0.3s',
-            zIndex: 9999,
-          }}
-        />
       </div>
     </BrowserRouter>
   )
