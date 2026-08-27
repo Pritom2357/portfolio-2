@@ -16,19 +16,12 @@ import {
   GitIcon,
   ViteIcon
 } from './Icons';
-import { FaUnity } from 'react-icons/fa';
+import { FaUnity, FaFileAlt } from 'react-icons/fa';
 import { DiPostgresql } from 'react-icons/di';
 import { SiLangchain, SiMongodb, SiN8N, SiNeo4J } from 'react-icons/si';
 import byeHand from '../assets/bye.png';
 import brainIcon from '../assets/brain.png';
 import me from '../assets/me-landing.png';
-
-// Add more icons for contacts
-const KaggleIcon = ({ className = "w-5 h-5" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.071.358"/>
-  </svg>
-);
 
 const BlogIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -247,7 +240,7 @@ const Portfolio = () => {
           {/* WHO AM I */}
           <BentoCard index={1} className="who-am-i group bg-paper" onHoverChange={setWhoHovered}>
             <div className="flex items-start gap-3 md:gap-4 h-full">
-              <div className="flex-shrink-0 aspect-square w-[15%] min-w-[2.5rem] max-w-[3.5rem] rounded-xl border-2 border-ink bg-mustard p-1.5 flex items-center justify-center text-ink group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 overflow-hidden">
+              <div className="flex-shrink-0 aspect-square w-[15%] min-w-[2.5rem] max-w-[3.5rem] rounded-xl border-2 border-ink bg-lavender p-1.5 flex items-center justify-center text-ink group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 overflow-hidden">
                 <WhoAmIIconSwap isHovered={whoHovered} />
               </div>
               <div className="flex-1 min-w-0">
@@ -343,8 +336,8 @@ const Portfolio = () => {
                 <a href="https://blogging.pritombiswas.com/" target="_blank" rel="noreferrer" className="contact-pill" title="Blog" aria-label="Blog">
                   <BlogIcon className="w-4 h-4" />
                 </a>
-                <a href="https://www.kaggle.com/pritom2357" target="_blank" rel="noreferrer" className="contact-pill" title="Kaggle" aria-label="Kaggle">
-                  <KaggleIcon className="w-4 h-4" />
+                <a href="/Pritom_Biswas_CV.pdf" target="_blank" rel="noreferrer" className="contact-pill" title="CV" aria-label="Open my CV">
+                  <FaFileAlt className="w-4 h-4" />
                 </a>
               </div>
             </div>

@@ -9,9 +9,17 @@ import graphGeneratorImg from '../assets/graph-generator.png';
 import igraphicsImg from '../assets/igraphics-project.png';
 import unityGameImg from '../assets/unity-game.png';
 import dockerInitImg from '../assets/docker-init.png'
+import articulateImg from '../assets/articulate-ai.png';
+import dlSprintImg from '../assets/dl-sprint.png';
+import rxSenseImg from '../assets/rxsense.png';
+import astroKriegImg from '../assets/astrokrieg.png';
 
-// Map project names to uploaded asset images
+// Map project names to uploaded asset images (no entry = text placeholder)
 const imageMap = {
+  'Articulate AI': articulateImg,
+  'DL Sprint 4.0 — Bengali ASR + Diarization': dlSprintImg,
+  'RxSense': rxSenseImg,
+  'AstroKrieg': astroKriegImg,
   'PawPal': pawProtectorImg,
   'Resource Base (Full Stack)': resourceBaseImg,
   'Auto Drive Downloader': autoDriveImg,
@@ -44,6 +52,7 @@ const ProjectRow = ({ project, rowIndex }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [hoveredBox, setHoveredBox] = useState(null);
+  const [descOpen, setDescOpen] = useState(false); // mobile only; desktop always shows it
   const rowConfig = getRowAnimationConfig(rowIndex);
 
   const repoLinks = useMemo(() => {
@@ -98,7 +107,7 @@ const ProjectRow = ({ project, rowIndex }) => {
           <div className={`glitter-point glitter-point-left ${hoveredBox === 0 ? 'active' : ''}`}></div>
           <div className={`glitter-point glitter-point-right ${hoveredBox === 0 ? 'active' : ''}`}></div>
         </div>
-        {!imageError ? (
+        {imageSrc && !imageError ? (
           <img
             src={imageSrc}
             alt={project.projectName}
@@ -130,9 +139,20 @@ const ProjectRow = ({ project, rowIndex }) => {
             <div className={`glitter-point glitter-point-left ${hoveredBox === 1 ? 'active' : ''}`}></div>
             <div className={`glitter-point glitter-point-right ${hoveredBox === 1 ? 'active' : ''}`}></div>
           </div>
-          <h3 className="project-box__title">{project.projectName}</h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="project-box__title">{project.projectName}</h3>
+            <button
+              type="button"
+              className={`desc-toggle md:hidden ${descOpen ? 'open' : ''}`}
+              aria-expanded={descOpen}
+              aria-label={descOpen ? 'Hide description' : 'Show description'}
+              onClick={() => setDescOpen((v) => !v)}
+            >
+              ▾
+            </button>
+          </div>
           <p
-            className="project-box__text"
+            className={`project-box__text ${descOpen ? '' : 'hidden md:block'}`}
             dangerouslySetInnerHTML={{ __html: project.description }}
           />
           <div className="project-box__tags">

@@ -1,5 +1,54 @@
 [
   {
+    "projectName": "Articulate AI",
+    "description": "A <strong>spoken-English coach for Bengali speakers</strong>. Speaking practice here is either a BDT 8–24k/month tutor or a Western app that can't hear Bangla-specific mistakes (/v/, /θ/, /æ/), so I built one that can. Azure gives phoneme-level pronunciation scores, a <strong>DeepFilterNet3 denoiser</strong> microservice cleans the audio first, and for free-speech IELTS turns I transcribe once and feed the transcript back in as the reference. The whole CEFR curriculum (8 chapters, 40 lessons, 7,640 words) was parsed out of the Oxford 3000 PDF, each word with IPA, Bangla meaning and TTS, and <strong>SM-2 spaced repetition</strong> decides when a word comes back based on how you actually said it. Realtime via Socket.io + Postgres LISTEN/NOTIFY, CI/CD to a DigitalOcean droplet.",
+    "tags": ["React 19", "Node.js", "PostgreSQL", "Azure Speech", "OpenAI", "FastAPI", "Socket.io", "Docker"],
+    "categories": ["Development", "AI"],
+    "repoLinks": [
+      { "label": "Live", "url": "https://articulate-ai-1.onrender.com/" },
+      { "label": "Demo video", "url": "https://www.youtube.com/watch?v=xjKcrAwuTLw" },
+      { "label": "GitHub", "url": "https://github.com/Pritom2357/articulate-ai" }
+    ]
+  },
+  {
+    "projectName": "DL Sprint 4.0 — Bengali ASR + Diarization",
+    "description": "<strong>DL Sprint 4.0</strong> (BUET CSE Fest 2026, hosted on Kaggle): hour-long, noisy Bengali recordings in, who-said-what-when out. Our pipeline runs Demucs vocal separation → VAD → chunked <strong>Whisper Medium fine-tuned on Bengali</strong> → n-gram repetition cleanup + LLM correction for transcription, and a pyannote segmentation model fine-tuned on the competition data for diarization. Landed <strong>WER 0.38</strong> and <strong>DER 0.27</strong> on the private leaderboards, and we wrote it up as a paper (arXiv:2603.03158). Team of four with Epshita Jahan, Khandoker Md Tanjinul Islam and Tafsir Al Nafin.",
+    "tags": ["PyTorch", "Whisper", "pyannote", "Demucs", "Kaggle", "Speech"],
+    "categories": ["ML"],
+    "repoLinks": [
+      { "label": "Paper", "url": "https://arxiv.org/abs/2603.03158" },
+      { "label": "GitHub", "url": "https://github.com/Short-Potatoes/Bengali-long-form-transcription-and-diarization" }
+    ]
+  },
+  {
+    "projectName": "Valerix",
+    "description": "Hackathon backend for <strong>BUET CSE Fest 2026</strong>, built to survive its own failures. API gateway → order service → inventory service, each with its own Postgres, Kafka in between, deployed to a DigitalOcean box through GitHub Actions. The failure modes are there on purpose: a <strong>\"Gremlin\" middleware</strong> delays every Nth request, \"ghost\" failures commit and then drop the response, and idempotent reservations plus a status check mean retries never double-deduct stock. I wrote 35 of the 58 commits.",
+    "tags": ["Node.js", "PostgreSQL", "Kafka", "Docker Compose", "Kubernetes", "GitHub Actions", "Prometheus"],
+    "categories": ["Development"],
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/Short-Potatoes/Valerix" }
+    ]
+  },
+  {
+    "projectName": "RxSense",
+    "description": "A <strong>health app</strong> that reads your prescriptions and lab reports and actually explains them. Prescription OCR, lab values checked against reference ranges, <strong>drug-interaction and symptom agents</strong>, and RAG over MedlinePlus + medical textbooks so answers come with sources. Family profiles and a doctor dashboard on top. Team project; I landed 21 merged PRs (about half the commits): the backend, the Python server, the prescription reader, the report analyzer, LLM utils and the Render deploy.",
+    "tags": ["Node.js", "PostgreSQL", "LangChain", "OpenAI", "RAG", "Python"],
+    "categories": ["Development", "AI"],
+    "repoLinks": [
+      { "label": "GitHub", "url": "https://github.com/summertimesadness555349/RxSense" }
+    ]
+  },
+  {
+    "projectName": "AstroKrieg",
+    "description": "A momentum-based <strong>2D space shooter</strong> made for the IUT 12th ICT Fest 2026 GameJam in Unity 6. Ricochet off balls, reflect enemy fire back at them, three levels and a boss. Built in a few days with my teammates as <strong>team Expedition 23</strong>.",
+    "tags": ["Unity 6", "C#", "Game Jam", "2D"],
+    "categories": ["Development"],
+    "repoLinks": [
+      { "label": "itch.io", "url": "https://naphysicbal.itch.io/astrokrieg" },
+      { "label": "GitHub", "url": "https://github.com/Utshav-saha/Astrokrieg" }
+    ]
+  },
+  {
     "projectName": "PawPal",
     "description": "A comprehensive <strong>animal welfare platform</strong> designed to bridge the gap between pet adoption and community care. The system allows users to report stray animals, browse adoption listings, and manage veterinary records through a secure interface. I focused heavily on the <span className=\"text-cyan-400\">System design and AI orchestration</span> to ensure accessibility for non-technical users while maintaining a robust backend for data integrity. It solves the problem of fragmented pet care information by centralizing it into one responsive application. Built with <strong>Khandoker Md Tanjinul Islam</strong>, <strong>Epshita Jahan</strong>, and <strong>Rubaiyat Zaman Raisa</strong>.",
     "tags": ["React", "Node.js", "PostGreSQL", "Vector Database", "AI-RAG", "Tailwind CSS"],

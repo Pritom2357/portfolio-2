@@ -171,6 +171,13 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  /* 1px black outline around the transparent PNG, plus a touch darker */
+  filter:
+    drop-shadow(1px 0 0 var(--color-ink))
+    drop-shadow(-1px 0 0 var(--color-ink))
+    drop-shadow(0 1px 0 var(--color-ink))
+    drop-shadow(0 -1px 0 var(--color-ink))
+    saturate(1.3) brightness(0.92);
 }
 
 /* Who Am I text hover effect */
@@ -861,6 +868,31 @@ h1, h2, h3, .font-display {
   }
 }
 
+/* Mobile: the whole row is ONE card; inner boxes become sections separated by rules */
+@media (max-width: 767px) {
+  .project-row {
+    gap: 0;
+    background: var(--color-paper);
+    border: 3px solid var(--color-ink);
+    border-radius: 12px;
+    box-shadow: var(--shadow-nb);
+    overflow: hidden;
+  }
+
+  .project-right-col { gap: 0; }
+
+  /* .project-row prefix outranks the base .project-box rules declared later */
+  .project-row .project-box,
+  .project-row .project-box:hover {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .project-row .project-box--image { border-bottom: 3px solid var(--color-ink); }
+  .project-row .project-box--link { border-top: 3px solid var(--color-ink); }
+}
+
 /* Right column container - holds description (80%) and link (20%) */
 .project-right-col {
   display: flex;
@@ -934,7 +966,8 @@ h1, h2, h3, .font-display {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  flex: 4;
+  /* grow to fill, but never shrink below content (tags used to get clipped) */
+  flex: 1 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -950,6 +983,27 @@ h1, h2, h3, .font-display {
 @media (min-width: 768px) {
   .project-box__title { font-size: 1.4rem; }
 }
+
+/* Mobile-only chevron that expands the description */
+.desc-toggle {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--color-ink);
+  background: var(--color-mustard);
+  border: 2px solid var(--color-ink);
+  border-radius: 6px;
+  box-shadow: var(--shadow-nb-sm);
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 120ms ease;
+}
+
+.desc-toggle.open { transform: rotate(180deg); }
+.desc-toggle:active { box-shadow: none; }
 
 .project-box__text {
   font-size: 0.875rem;
@@ -989,7 +1043,7 @@ h1, h2, h3, .font-display {
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1rem;
-  flex: 1;
+  flex: 0 0 auto;
   background: var(--color-mustard);
 }
 
