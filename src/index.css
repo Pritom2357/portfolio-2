@@ -436,6 +436,13 @@
   height: clamp(0.85rem, 1.5vw, 1rem);
 }
 
+/* On the home card, icons shrink with the row so they never hit the card border */
+.technologies .tech-icon {
+  height: min(3rem, 100%);
+  width: auto;
+  min-width: 0;
+}
+
 /* Tech Icon Styles - Fluid sizing */
 .tech-icon {
   display: flex;

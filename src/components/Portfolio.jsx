@@ -370,7 +370,7 @@ const Portfolio = () => {
                 Details
               </button>
             </h3>
-            <div className="grid grid-cols-4 gap-[clamp(0.5rem,1vw,0.75rem)] flex-1 content-center">
+            <div className="grid grid-cols-4 grid-rows-[repeat(2,minmax(0,1fr))] gap-[clamp(0.5rem,1vw,0.75rem)] flex-1 min-h-0 items-center justify-items-center content-center">
               {techGrid.map((tech, i) => (
                 <div key={i} className={`tech-icon ${tech.color}`}>
                   <span className="tech-icon__glyph">{tech.icon}</span>
